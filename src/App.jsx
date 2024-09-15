@@ -1,12 +1,15 @@
 import styles from './App.module.css';
-import './styles/global.css';
+import './styles/index.css';
 import { Header } from './_components/Header/Header';
+import { Sidebar } from './_components/Sidebar/Sidebar';
 
 function App() {
   return (
     <div>
       <Header />
-      <div className={styles.wrapper}></div>
+      <div className={styles.wrapper}>
+        <Sidebar />
+      </div>
     </div>
   );
 }
