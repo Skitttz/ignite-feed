@@ -1,3 +1,6 @@
+import { Avatar } from '../Avatar/Avatar';
+import { CommentForm } from './CommentForm';
+import { CommentList } from './CommentList';
 import styles from './Post.module.css';
 
 export function Post() {
@@ -5,11 +8,7 @@ export function Post() {
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img
-            className={styles.avatar}
-            src="https://github.com/AldoWa.png"
-            alt="Avatar User"
-          />
+          <Avatar src={'https://github.com/AldoWa.png'} />
           <div className={styles.authorInfo}>
             <strong className="block">Aldo Wanderley</strong>
             <span className="block text-sm leading-relax">
@@ -37,7 +36,13 @@ export function Post() {
             Link
           </a>
         </p>
+        <p>
+          <a href="#">#NovoPost</a> <a href="#">#ToNaGringa</a>{' '}
+          <a href="#">#Projeto</a>
+        </p>
       </div>
+      <CommentForm />
+      <CommentList />
     </article>
   );
 }
