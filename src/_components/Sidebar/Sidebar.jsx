@@ -14,7 +14,7 @@ export function Sidebar() {
           alt="Avatar Profile"
         />
         <strong className="text-base leading-relax">Skittz</strong>
-        <span className="text-sm leading-relax">Developer Front-end</span>
+        <span className="text-sm leading-relax">Web Developer</span>
       </div>
       <footer>
         <a className="bold" href="#">
