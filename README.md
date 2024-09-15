@@ -10,9 +10,13 @@
 
 ## 🔧 Technologies Used
 
-- ⚛️ ReactJS
-- ⚡ Vite
-- 📅 Date-fns
+- ⚛️ ReactJS: A JavaScript library for building UI.
+
+- ⚡ Vite: A fast build tool for modern web development.
+
+- 📅 Date-fns: A lightweight library for easy date manipulation and formatting.
+
+- 🪐 Phosphor: Icon library offering customizable icons.
 
 ## ▶️ How to Run Project
 
