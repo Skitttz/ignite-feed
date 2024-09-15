@@ -14,7 +14,20 @@
 }
 
 /* Line Height */
-
 .leading-relax {
   line-height: 1.6;
+}
+
+
+/* Display */
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
 }
