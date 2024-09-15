@@ -8,7 +8,7 @@
 - [x] Applaud (like) posts
 - [x] Delete comments
 
-## 🔧 Technologies Used
+## 🔧 Built with
 
 - ⚛️ ReactJS: A JavaScript library for building UI.
 
@@ -38,7 +38,7 @@
    npm run dev
    ```
 
-4. Acess the URL in your browser\*\*:
+4. Acess the URL in your browser:
    ```
    http://localhost:5173/
    ```
