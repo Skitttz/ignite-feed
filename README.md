@@ -2,6 +2,13 @@
 
 <div align="center"><b>Ignite Feed</b> is a simple social media feed simulation </div>
 
+</br>
+
+<div align="center" style="display: flex; justify-content: center; align-items: center;">
+  <img width="70%" src="./public/pc-ignite-feed.png">
+  <img width="20%" src="./public/phone-ignite-feed.png" style="margin-left: 20px;">
+</div>
+
 ## ✨ Features
 
 - [x] Add comments
