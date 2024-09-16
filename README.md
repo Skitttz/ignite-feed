@@ -45,11 +45,11 @@
    npm run dev
    ```
 
-4. Acess the URL in your browser:
+4. **Acess the URL in your browser:**
    ```
    http://localhost:5173/
    ```
 
 ## 🌐 How to Access
 
-This project check out [right here](https://examplelink.com)!
+This project check out [right here](https://ignite-feed-psi-amber.vercel.app/)!
