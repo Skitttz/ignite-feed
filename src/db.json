@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "author": {
+      "avatarUrl": "https://github.com/AldoWa.png",
+      "name": "Aldo Wanderley",
+      "role": "Developer Senior"
+    },
+    "publishedAt": "2024-09-15T10:00:00",
+    "descriptions": [
+      { "type": "paragraph", "content": "👋 E aí, galera!" },
+      {
+        "type": "paragraph",
+        "content": "Acabei de subir um projeto super legal 🚀 e, com isso, consegui uma vaga na gringa 🌍✈️"
+      },
+      {
+        "type": "paragraph",
+        "content": "Acessa aí para mais detalhes:"
+      },
+      { "type": "link", "content": "https://github.com/AldoWa/video-plataform" }
+    ]
+  },
+  {
+    "id": 3,
+    "author": {
+      "avatarUrl": "https://github.com/antonycms.png",
+      "name": "Antony Carlos",
+      "role": "Developer Senior"
+    },
+    "publishedAt": "2024-09-14T12:00:00",
+
+    "descriptions": [
+      {
+        "type": "paragraph",
+        "content": "Eai galera! 👋 Estou super animado para compartilhar uma aplicação Electron que eu criei chamada t-browser 🚀. Para quem é do front-end, isso vai ajudar muito! 💻✨"
+      },
+      {
+        "type": "paragraph",
+        "content": "Para entender mais, dá uma olhadinha no repo:"
+      },
+      {
+        "type": "link",
+        "content": "https://github.com/AntonyCarlos/t-browser"
+      }
+    ]
+  }
+]
