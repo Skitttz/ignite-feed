@@ -1,48 +1,56 @@
+import { format, formatDistanceToNow } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 import { Avatar } from '../Avatar/Avatar';
 import { CommentForm } from './CommentForm';
 import { CommentList } from './CommentList';
 import styles from './Post.module.css';
+import { useState } from 'react';
 
-export function Post() {
+export function Post({ author, content, publishedAt }) {
+  const [comments, setComments] = useState(['Que post bacana! 😎👍✨']);
+  const publishedDateFormat = format(
+    publishedAt,
+    "dd 'de' LLLL 'as' HH:mm'h'",
+    { locale: ptBR },
+  );
+  const publishedDateToNow = formatDistanceToNow(publishedAt, {
+    locale: ptBR,
+    addSuffix: true,
+  });
+
   return (
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <Avatar src={'https://github.com/AldoWa.png'} />
+          <Avatar src={author.avatarUrl} />
           <div className={styles.authorInfo}>
-            <strong className="block">Aldo Wanderley</strong>
-            <span className="block text-sm leading-relax">
-              Developer Senior
-            </span>
+            <strong className="block">{author.name}</strong>
+            <span className="block text-sm leading-relax">{author.role}</span>
           </div>
         </div>
         <time
-          title="14 de setembro as 23:50"
+          title={publishedDateFormat}
           dateTime="2024-09-15 23:50"
           className="text-sm"
         >
-          Publicado há 1h
+          {publishedDateToNow}
         </time>
       </header>
       <div className={`${styles.content} leading-relax`}>
-        <p>👋 E aí, galera!</p>
-        <p>
-          Acabei de subir um projeto super legal 🚀 e, com isso, consegui uma
-          vaga na gringa 🌍✈️.
-        </p>
-        <p>
-          Acessa aí para mais detalhes:{' '}
-          <a href="https://github.com/AldoWa/video-plataform" className="bold">
-            Link
-          </a>
-        </p>
-        <p>
-          <a href="#">#NovoPost</a> <a href="#">#ToNaGringa</a>{' '}
-          <a href="#">#Projeto</a>
-        </p>
+        {content.map((line, index) => {
+          if (line.type === 'paragraph') {
+            return <p key={index}>{line.content}</p>;
+          } else if (line.type === 'link') {
+            return (
+              <a key={index} className="bold" href="">
+                {line.content}
+              </a>
+            );
+          }
+        })}
       </div>
-      <CommentForm />
-      <CommentList />
+      <CommentForm comments={comments} setComments={setComments} />
+      <CommentList comments={comments} setComments={setComments} />
     </article>
   );
 }
