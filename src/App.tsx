@@ -1,8 +1,8 @@
 import styles from './App.module.css';
 import './styles/index.css';
-import { Header } from './_components/Header/Header';
-import { Sidebar } from './_components/Sidebar/Sidebar';
-import { Post } from './_components/Post/Post';
+import { Header } from '@components/Header/Header';
+import { Sidebar } from '@components/Sidebar/Sidebar';
+import { Post } from '@components/Post/Post';
 import Posts from './db.json';
 
 function App() {
@@ -16,8 +16,9 @@ function App() {
             return (
               <Post
                 key={post.id}
+                id={post.id}
                 author={post.author}
-                content={post.descriptions}
+                descriptions={post.descriptions}
                 publishedAt={post.publishedAt}
               />
             );
