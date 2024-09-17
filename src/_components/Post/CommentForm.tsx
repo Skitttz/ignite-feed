@@ -1,20 +1,23 @@
-import { useState } from 'react';
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
 import styles from './CommentForm.module.css';
+import { CommentFormProps } from '@interfaces/comment';
 
-export function CommentForm({ comments, setComments }) {
+export function CommentForm({ comments, setComments }: CommentFormProps) {
   const [newCommentText, setNewCommentText] = useState('');
-  const handleNewCommentChange = (event) => {
+  const handleNewCommentChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     setNewCommentText(event.target.value);
   };
-  const handleCreateNewComment = (event) => {
+  const handleCreateNewComment = (event: FormEvent) => {
     event.preventDefault();
     setComments([...comments, newCommentText]);
     setNewCommentText('');
   };
 
-  const handleCommentInvalid = (event) => {
+  const handleCommentInvalid = (event: InvalidEvent<HTMLTextAreaElement>) => {
     event.target.setCustomValidity('Este campo eh obrigatorio');
   };
+
+  const isCommentEmpty = newCommentText.length === 0;
 
   return (
     <form className={styles.commentForm} onSubmit={handleCreateNewComment}>
@@ -27,7 +30,9 @@ export function CommentForm({ comments, setComments }) {
         required
       ></textarea>
       <footer>
-        <button type="submit">Comentar</button>
+        <button disabled={isCommentEmpty} type="submit">
+          Comentar
+        </button>
       </footer>
     </form>
   );

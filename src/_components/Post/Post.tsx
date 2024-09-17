@@ -1,13 +1,14 @@
 import { format, formatDistanceToNow } from 'date-fns';
-import ptBR from 'date-fns/locale/pt-BR';
+import { ptBR } from 'date-fns/locale/pt-BR';
 import { Avatar } from '../Avatar/Avatar';
 import { CommentForm } from './CommentForm';
 import { CommentList } from './CommentList';
 import styles from './Post.module.css';
 import { useState } from 'react';
+import { PostProps } from '@interfaces/post';
 
-export function Post({ author, content, publishedAt }) {
-  const [comments, setComments] = useState(['Que post bacana! 😎👍✨']);
+export function Post({ author, descriptions, publishedAt }: PostProps) {
+  const [comments, setComments] = useState<string[]>([]);
   const publishedDateFormat = format(
     publishedAt,
     "dd 'de' LLLL 'as' HH:mm'h'",
@@ -37,7 +38,7 @@ export function Post({ author, content, publishedAt }) {
         </time>
       </header>
       <div className={`${styles.content} leading-relax`}>
-        {content.map((line, index) => {
+        {descriptions.map((line, index) => {
           if (line.type === 'paragraph') {
             return <p key={index}>{line.content}</p>;
           } else if (line.type === 'link') {
