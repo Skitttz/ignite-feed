@@ -12,8 +12,10 @@
 ## ✨ Features
 
 - [x] Add comments
-- [x] Applaud (like) posts
+- [x] Applaud (like) comments
 - [x] Delete comments
+- [ ] Add post
+- [ ] Applaud (like) post
 
 ## 🔧 Built with
 
