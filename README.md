@@ -5,8 +5,8 @@
 </br>
 
 <div align="center" style="display: flex; justify-content: center; align-items: center;">
-  <img width="70%" src="./public/pc-ignite-feed.png">
-  <img width="20%" src="./public/phone-ignite-feed.png" style="margin-left: 20px;">
+  <img width="70%" src="https://i.ibb.co/PGg5DPr/pc-ignite-feed.png">
+  <img width="20%" src="https://i.ibb.co/vqd2PvZ/phone-ignite-feed.png" style="margin-left: 20px;">
 </div>
 
 ## ✨ Features
