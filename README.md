@@ -17,7 +17,7 @@ _These features are included as part of the course._
 - [x] Applaud (like) comments: Enable to like and show appreciation for comments.
 - [x] Delete comments: Option to remove comments.
 
-### ✨ Personally Added Features
+### ✨ Custom Features
 
 _These features were added beyond the default course functionalities._
 
