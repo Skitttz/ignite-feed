@@ -7,3 +7,8 @@ export interface PostProps {
   publishedAt: string;
   descriptions: DescriptionProps[];
 }
+
+
+export interface PostFormProps{
+  handleCloseModal: () => void;
+}
