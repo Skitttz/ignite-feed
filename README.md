@@ -9,13 +9,20 @@
   <img width="20%" src="https://i.ibb.co/vqd2PvZ/phone-ignite-feed.png" style="margin-left: 20px;">
 </div>
 
-## ✨ Features
+## ✨ Default Features
 
-- [x] Add comments
-- [x] Applaud (like) comments
-- [x] Delete comments
-- [x] Add post
-- [ ] Applaud (like) post
+_These features are included as part of the course._
+
+- [x] Add comments: Create comments on posts.
+- [x] Applaud (like) comments: Enable to like and show appreciation for comments.
+- [x] Delete comments: Option to remove comments.
+
+### ✨ Personally Added Features
+
+_These features were added beyond the default course functionalities._
+
+- [x] Add post: Create and publish new posts.
+- [ ] Applaud (like) post: Like and show appreciation for posts.
 
 ## 🔧 Built with
 
