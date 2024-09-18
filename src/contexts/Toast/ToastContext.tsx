@@ -6,7 +6,7 @@ import { ToastProps } from '@interfaces/toast';
 import styles from './ToastContext.module.css';
 
 interface ToastContextType {
-  showToast: ({ message, type }: ToastProps) => void;
+  showToast: ({ message, type }: Omit<ToastProps, 'id'>) => void;
 }
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
@@ -14,7 +14,7 @@ let toastId = 1;
 export const ToastProvider = ({ children }: ProviderProps) => {
   const [toasts, setToasts] = useState<ToastProps[]>([]);
 
-  const showToast = ({ message, type }: ToastProps) => {
+  const showToast = ({ message, type }: Omit<ToastProps, 'id'>) => {
     const id = toastId++;
     setToasts((prevToasts) => [...prevToasts, { id, message, type }]);
     setTimeout(() => {

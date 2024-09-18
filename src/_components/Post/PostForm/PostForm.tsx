@@ -41,17 +41,20 @@ export function PostForm({ handleCloseModal }: PostFormProps) {
       setIsSucess(true);
     } catch (error) {
       if (!isSuccess && isEmptyForm(textContent)) {
-        return showToast(
-          'Ops! Erro ao criar a postagem, tente novamente.',
-          'error',
-        );
+        return showToast({
+          message: 'Ops! Erro ao criar a postagem, tente novamente.',
+          type: 'error',
+        });
       }
     }
   };
   useEffect(() => {
     if (isSuccess) {
       handleCloseModal();
-      return showToast('Post Criado com Sucesso!', 'success');
+      return showToast({
+        message: 'Post Criado com Sucesso!',
+        type: 'success',
+      });
     }
   }, [isSuccess, handleCloseModal, posts]);
   return (
