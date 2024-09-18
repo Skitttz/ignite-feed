@@ -1,6 +1,7 @@
-import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import styles from './CommentForm.module.css';
 import { CommentFormProps } from '@interfaces/comment';
+import { handleSubmitInvalid, isEmptyForm } from '@utils/formSubmit';
 
 export function CommentForm({ comments, setComments }: CommentFormProps) {
   const [newCommentText, setNewCommentText] = useState('');
@@ -13,12 +14,6 @@ export function CommentForm({ comments, setComments }: CommentFormProps) {
     setNewCommentText('');
   };
 
-  const handleCommentInvalid = (event: InvalidEvent<HTMLTextAreaElement>) => {
-    event.target.setCustomValidity('Este campo eh obrigatorio');
-  };
-
-  const isCommentEmpty = newCommentText.length === 0;
-
   return (
     <form className={styles.commentForm} onSubmit={handleCreateNewComment}>
       <strong className="leading-relax">Deixe seu feedback</strong>
@@ -26,11 +21,11 @@ export function CommentForm({ comments, setComments }: CommentFormProps) {
         placeholder="Deixe um comentario"
         value={newCommentText}
         onChange={handleNewCommentChange}
-        onInvalid={handleCommentInvalid}
+        onInvalid={handleSubmitInvalid}
         required
       ></textarea>
       <footer>
-        <button disabled={isCommentEmpty} type="submit">
+        <button disabled={isEmptyForm(newCommentText)} type="submit">
           Comentar
         </button>
       </footer>
