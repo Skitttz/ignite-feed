@@ -14,7 +14,7 @@
 - [x] Add comments
 - [x] Applaud (like) comments
 - [x] Delete comments
-- [ ] Add post
+- [x] Add post
 - [ ] Applaud (like) post
 
 ## 🔧 Built with
