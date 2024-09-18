@@ -2,30 +2,23 @@ import styles from './App.module.css';
 import './styles/index.css';
 import { Header } from '@components/Header/Header';
 import { Sidebar } from '@components/Sidebar/Sidebar';
-import { Post } from '@components/Post/Post';
-import Posts from './db.json';
+import { PostList } from '@components/Post/PostList';
+import { PostProviders } from '@providers/PostProviders';
+import { ToastProviders } from '@providers/ToastProviders';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <div className={styles.wrapper}>
-        <Sidebar />
+    <PostProviders>
+      <ToastProviders>
         <div>
-          {Posts.map((post) => {
-            return (
-              <Post
-                key={post.id}
-                id={post.id}
-                author={post.author}
-                descriptions={post.descriptions}
-                publishedAt={post.publishedAt}
-              />
-            );
-          })}
+          <Header />
+          <div className={styles.wrapper}>
+            <Sidebar />
+            <PostList />
+          </div>
         </div>
-      </div>
-    </div>
+      </ToastProviders>
+    </PostProviders>
   );
 }
 
