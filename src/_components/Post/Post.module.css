@@ -2,7 +2,9 @@
   background: var(--gray-800);
   border-radius: 8px;
   padding: 2.5rem;
+  max-width: 800px;
 }
+
 
 .post+.post {
   margin-top: 2rem;
@@ -48,6 +50,11 @@
 
 .content {
   color: var(--gray-300);
+}
+
+.content p,
+.content a {
+  word-break: break-all;
 }
 
 .content p {
