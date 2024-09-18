@@ -9,6 +9,10 @@
     "paths": {
       "@components/*": ["src/_components/*"],
       "@interfaces/*": ["src/interfaces/*"],
+      "@providers/*": ["src/providers/*"],
+      "@contexts/*": ["src/contexts/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@assets/*": ["src/assets/*"],
       "@styles/*": ["src/styles/*"],
     },
