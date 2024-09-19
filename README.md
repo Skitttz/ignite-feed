@@ -14,7 +14,7 @@
 _These features are included as part of the course._
 
 - [x] Add comments: Create comments on posts.
-- [x] Applaud (like) comments: Enable to like and show appreciation for comments.
+- [x] Aplaudir (like) comments: Enable to like and show appreciation for comments.
 - [x] Delete comments: Option to remove comments.
 
 ### ✨ Custom Features
@@ -22,7 +22,7 @@ _These features are included as part of the course._
 _These features were added beyond the default course functionalities._
 
 - [x] Add post: Create and publish new posts.
-- [ ] Applaud (like) post: Like and show appreciation for posts.
+- [x] Aplaudir (like) post: Like and show appreciation for posts.
 
 ## 🔧 Built with
 
