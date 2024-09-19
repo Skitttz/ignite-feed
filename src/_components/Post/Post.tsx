@@ -6,6 +6,7 @@ import { CommentList } from './CommentList';
 import styles from './Post.module.css';
 import { useState } from 'react';
 import { PostProps } from '@interfaces/post';
+import { Like } from '@components/Like/Like';
 
 export function Post({ author, descriptions, publishedAt }: PostProps) {
   const [comments, setComments] = useState<string[]>([]);
@@ -49,6 +50,9 @@ export function Post({ author, descriptions, publishedAt }: PostProps) {
             );
           }
         })}
+      </div>
+      <div className={styles.containerLikePost}>
+        <Like />
       </div>
       <CommentForm comments={comments} setComments={setComments} />
       <CommentList comments={comments} setComments={setComments} />
