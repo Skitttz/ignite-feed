@@ -44,7 +44,12 @@ export function Post({ author, descriptions, publishedAt }: PostProps) {
             return <p key={index}>{line.content}</p>;
           } else if (line.type === 'link') {
             return (
-              <a key={index} className="bold" href="">
+              <a
+                key={index}
+                className="bold"
+                target="_blank"
+                href={line.content}
+              >
                 {line.content}
               </a>
             );
