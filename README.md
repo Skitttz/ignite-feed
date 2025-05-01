@@ -23,6 +23,7 @@ _These features were added beyond the default course functionalities._
 
 - [x] Add post: Create and publish new posts.
 - [x] Aplaudir (like) post: Like and show appreciation for posts.
+- [ ] Edit profile: customize avatar, name and description.
 
 ## 🔧 Built with
 
